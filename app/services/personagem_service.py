@@ -11,5 +11,6 @@ def criar_personagem_interativo():
     vigor = int(input('Digite o Vigor do personagem: '))
 
     personagem = Personagem(nome, agilidade, forca, intelectp, vida, vigor)
+    print(type(personagem))
 
     return personagem

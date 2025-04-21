@@ -108,8 +108,8 @@ def insert_personagem(conn, personagem):
 def get_all_personagens(conn):
     try:
         cursor = conn.cursor()
-        cursor.execute(''' SELECT nome FROM personagem ''')
-        personagens = cursor.fetchone()
+        cursor.execute(''' SELECT nome, agilidade, forca, intelecto, presenca, vigor FROM personagem ''')
+        personagens = cursor.fetchall()
         return personagens
 
     except sqlite3.Error as e:

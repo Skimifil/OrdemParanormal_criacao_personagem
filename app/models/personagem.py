@@ -21,4 +21,18 @@ class Personagem:
 
 
     def exportar_json(self):
-        pass
+        personagem_dict = {
+            "nome": self.nome,
+            "agilidade": self.agilidade,
+            "forca": self.forca,
+            "intelecto": self.intelecto,
+            "presenca": self.presenca,
+            "vigor": self.vigor,
+            "classe_id": self.classe_id,
+            "trilha_id": self.trilha_id,
+            "origem_id": self.origem_id,
+            "domo_id": self.domo_id,
+            "inventario_id": self.inventario_id
+        }
+
+        return personagem_dict

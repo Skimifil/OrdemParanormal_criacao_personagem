@@ -2,9 +2,9 @@ import tkinter as tk
 from tkinter import ttk
 
 class MainWindow(tk.Tk):
-    def __init__(self):
-        super().__init__()
-        self.title("Menu de criação de personagens")
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.title("Menu de Personagens")
         self.geometry("900x600")
 
         self.tabs = ttk.Notebook(self)
