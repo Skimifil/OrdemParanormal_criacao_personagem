@@ -1,0 +1,6 @@
+cffi==1.17.1
+charset-normalizer==3.4.1
+cryptography==44.0.2
+future==1.0.0
+pycparser==2.22
+pycryptodome==3.22.0

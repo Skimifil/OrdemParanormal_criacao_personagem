@@ -105,6 +105,16 @@ def insert_personagem(conn, personagem):
         return f"Erro ao inserir personagem: {e}"
 
 
+def get_all_personagens(conn):
+    try:
+        cursor = conn.cursor()
+        cursor.execute(''' SELECT nome FROM personagem ''')
+        personagens = cursor.fetchone()
+        return personagens
+
+    except sqlite3.Error as e:
+        return f"Erro ao buscar personagens: {e}"
+
 def get_personagem_por_nome(conn, nome):
     try:
         cursor = conn.cursor()

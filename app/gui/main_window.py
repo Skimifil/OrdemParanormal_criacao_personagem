@@ -13,7 +13,12 @@ class MainWindow(tk.Tk):
         # Importar as abas (depois você cria elas)
         from .agente_frame import AgenteFrame
         from .classe_frame import ClasseFrame
+        from .origem_frame import OrigemFrame
+        from .equipamento_frame import EquipamentoFrame
+        from .ritual_frame import RitualFrame
 
         self.tabs.add(AgenteFrame(self.tabs), text="Agentes")
         self.tabs.add(ClasseFrame(self.tabs), text="Classes")
-        # Adicionar depois: Origens, Equipamentos, Rituais
+        self.tabs.add(OrigemFrame(self.tabs), text="Origens")
+        self.tabs.add(EquipamentoFrame(self.tabs), text="Equipamento")
+        self.tabs.add(RitualFrame(self.tabs), text="Rituais")
